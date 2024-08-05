@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>IP Address Redirect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header style="background-color: #4CAF50; color: white; padding: 15px; text-align: center;">
+        <h1 style="margin: 0; font-size: 1.5em;">ESP32 Danger Alert System</h1>
+    </header>
+    <h1 style="text-align: center;font-size: 30px;font-weight: 700;">MADE BY GROUP 11</h1>
+    <div class="flex items-center justify-center h-screen bg-gray-100">
+        <div class="bg-white p-8 rounded-lg shadow-md text-center">
+            <h1 class="text-2xl font-semibold mb-4 text-gray-700">IP Address Redirect</h1>
+            <input type="text" id="ipAddress" placeholder="Enter IP address"
+                class="w-full p-3 mb-4 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            <button onclick="redirect()"
+                class="w-full p-3 text-lg text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">Submit</button>
+        </div>
+    </div>
+    <footer
+        style="background-color: #4CAF50; color: white; text-align: center; padding: 10px 0; position: fixed; bottom: 0; width: 100%;">
+        <p style="margin: 0;">&copy; 2024 Women Safety Device</p>
+    </footer>
+    <script>
+        function redirect() {
+            const ip = document.getElementById('ipAddress').value;
+            if (ip) {
+                window.location.href = 'http://' + ip;
+            } else {
+                alert('Please enter a valid IP address');
+            }
+        }
+    </script>
+</body>
+
+</html>
